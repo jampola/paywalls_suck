@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="row marketing">
+	<div class="col-lg-12">
+	  <h4>About this abomination</h4>
+	  <p>I was on a new laptop with no internet in the middle of nowhere, but I remember I had a small collection of Python libs sitting in some other projects, so I toyed with the idea of creating something solely based on what I had available. A few beers and as many hours later, this is it! </p>
+
+	  <h4>How?</h4>
+	  <p>This is made posible thanks to the following projects</p>
+	  <ul>
+	  	<li><a href="#">Flask</a></li>
+	  	<li><a href="#">Selenium</a></li>
+	  	<li><a href="#">PhantomJS</a></li>
+	  	<li><a href="#">Bootstrap</a></li>
+	  	<li><a href="#">Python (duh)</a></li>
+	  </ul>
+
+	  <h4>FAQ</h4>
+	  <p>
+	  	<b>Hey! This is great! Can I donate to you?</b>
+	  	<br>
+	  	Well, I do this for love, but if you'd like to buy me a beer, feel free to donate via <a href="https://paypal.me/JamesBos">PayPal</a> or via bitcoin: 
+	  	<code>1PBfPiKpUVVAWNNJvSw4QULguRppWFcLmw</code>
+	  </p>
+	  <p>
+	  	<b>How long are the images stored?</b>
+	  	<br>
+		How long images remain on the server depends on the traffic. This is intended to be a service for rendering images, not hosting them. In saying that, I'm not going to lose sleep if someone sends the link to a few people, however I don't particularly wish to get /.ed or a Reddit hug of death!
+		<br>
+		<u>tldr:</u> Cron will delete them after a predetermined period of time.
+	  </p>
+	  <p>
+	  	<b>The website I enter doesn't render properly, what can you do?</b>
+	  	<br>
+	  	When using this service, your mileage may vary. Very sorry about that.
+	  </p>
+	  <p>
+	  	<b>Is the source available for this?</b>
+	  	<br>
+	  	Certainly is! It's under the GPLv2 licence. Feel free to fork it <a href="https://github.com/jampola/paywallssuck.git">here!</a>
+	  </p>
+	  <p>
+	  	<b>Is there an API?</b>
+	  	<br>
+	  	Yep! Shoot me an <a href="https://www.jamesbos.com/contact">email</a> for an API key.
+	  	<br>
+	  	<table class="table table-bordered">
+	  		<tbody>
+	  			<tr>
+	  				<th>End Point</th><td>/api/grab</td>
+	  			</tr>
+	  			<tr>
+	  				<th>Keys</th><td>url (required), width (optional), height (optional)</td>
+	  			</tr>
+	  			<tr>
+	  				<th>Headers</th><td>api_key  (required)</td>
+	  			</tr>
+	  			<tr>
+	  				<th>Return Value</th><td>{'url':'filename.png'}</td>
+	  			</tr>
+	  		</tbody>
+	  	</table>
+	  </p>
+	  <p>
+	  	<b>Who are you anyway??</b>
+	  	<br>
+	  	I'm James! I like to pretend I am a web developer, but I mostly spend most of my time doing unix-y stuff. I have a <a href="https://www.jamesbos.com">website</a> too!
+	  </p>
+	  <p>
+	  	<b>Hi, I am from <\insert website here\>, can you please remove the ability to screenshot our page?</b>
+	  	<br>
+	  	I can't promise anything, but feel free to get in contact with me via my <a href="https://www.jamesbos.com">website</a>.
+	  </p>
+	</div>
+</div>
+{% endblock %}

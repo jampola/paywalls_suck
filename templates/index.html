@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="jumbotron">
+	<h1 class="display-3">Hate Paywalls?</h1>
+	<hr class="my-4">
+	<p class="lead">Just enter the URL of the page in question for a PNG copy of the page. <br>It's that easy!</p>
+</div>
+
+<div class="row">
+	<div class='col-lg-10'>
+		<div class="input-group">
+			<input type="text" name="req_url" id="req_url" class="form-control" placeholder="Enter full URL. Eg. https://www.nytimes.com">
+			<span class="input-group-btn">
+				<button class="btn btn-secondary btn-info" id="get_page" type="button">Go!</button>
+			</span>
+		</div>
+	</div>
+	<div class='col-lg-2'>
+		<h6><small><a href="#" id="toggle_options">Advanced Options</a></small></h6>
+	</div>
+
+	<div class='col-lg-12' id="options_div" style="display:none;">
+	<div class="d-flex p-2">X/Y dimensions (Hint: both X and Y required)</div>
+		<div class="input-group">
+			<input type="text" name="req_width" id="req_width" class="form-control" placeholder="Width px (optional)">
+			<input type="text" name="req_height" id="req_height" class="form-control" placeholder="Height px (optional)">
+		</div>
+	</div>
+
+</div>
+
+<br>
+
+<div class="row">
+	<div class='col-md-12 text-center'>
+		<a hidden class="btn btn-md btn-warning loading-animation" id="callback_url" role="button"></a>
+	</div>
+</div>
+<br>
+{% endblock %}
