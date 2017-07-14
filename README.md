@@ -1,10 +1,10 @@
 # Paywalls Suck
 
-Web app to generate a screengrab from a given URL.
+Web app written in Flask/Flask-restful to generate a screengrab from a given URL.
 
 ## Whats here?
 
-A flask app as well as a simple API (built on top of flask-restful)
+Web app and a simple API
 
 ## Background
 
@@ -18,6 +18,25 @@ See requirements.txt or simply
 ```
 pip install -r requirements.txt
 ```
+
+## API Usage
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th>End Point</th><td>/api/grab</td>
+		</tr>
+		<tr>
+			<th>Keys</th><td>url (required), width (optional), height (optional)</td>
+		</tr>
+		<tr>
+			<th>Headers</th><td>api_key  (required)</td>
+		</tr>
+		<tr>
+			<th>Return Value</th><td>{'url':'filename.png'}</td>
+		</tr>
+	</tbody>
+</table>
 
 ### Libraries used
 
