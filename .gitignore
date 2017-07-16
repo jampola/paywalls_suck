@@ -1,4 +1,8 @@
+.gitignore
+ghostdriver.log
 bin/
 include/
 local/
 selenium/
+lib/python2.7/
+*.pyc

@@ -23,6 +23,7 @@ $(function() {
 		}
 
 		$("#callback_url").removeAttr('hidden');
+		$("#callback_url").addClass('btn-warning loading-animation')
 		$("#callback_url").text("Doing the magic...")
 		$.ajax({
 			url: '/api/grab',
