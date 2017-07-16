@@ -3,17 +3,22 @@ from flask import Flask, flash, request, url_for, render_template, abort, Respon
 from flask_restful import Resource, Api, reqparse
 from lib import screenshot
 from functools import wraps
-import datetime, logging, traceback
+import datetime, logging, traceback, os
 
 # App and Imports setup
 app = Flask(__name__)
 api = Api(app)
 app.url_map.strict_slashes = False
-app.secret_key = 'Turn off the lights, I\'m watching Back to the Future' 
+app.secret_key = 'Turn off the lights, I\'m watching Back to the Future'
 logger = logging.getLogger(__name__)
 parser = reqparse.RequestParser()
 
 # Logging Setup
+
+# Check to see if logs is created, if not, create it
+if not os.path.exists('logs/'):
+    os.makedirs('logs/')
+
 logger.setLevel(logging.INFO)
 handler = logging.FileHandler('./logs/{}.log'.format(datetime.datetime.now().strftime("%Y-%m-%d")))
 handler.setLevel(logging.INFO)
