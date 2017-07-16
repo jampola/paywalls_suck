@@ -4,7 +4,7 @@ import os, hashlib
 br = webdriver.PhantomJS()
 save_location = "./static/screenshots/"
 # 10 seconds should be enough for most pages. YMMV.
-timeout = 10
+timeout = 15
 
 def get_screenshot(url,width,height):
 	# if no dimentions included, default to 0
