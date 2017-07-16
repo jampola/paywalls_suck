@@ -6,3 +6,4 @@ local/
 selenium/
 lib/python2.7/
 *.pyc
+*.log
