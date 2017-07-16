@@ -28,7 +28,7 @@ $(function() {
 		$.ajax({
 			url: '/api/grab',
 			headers: {
-				'key':'super secret key right here that does nothing',
+				'key':'e4b2ce6cc31eca46fc64257f3cadb4fa',
 			},
 			type: 'POST',
 			data: 

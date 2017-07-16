@@ -31,7 +31,6 @@ keys = [
     'e4b2ce6cc31eca46fc64257f3cadb4fa' # md5sum as an example
 ]
 
-
 ''' Start Basic API key Mechanism '''
 def check_auth(key):
     return key in keys
@@ -43,11 +42,6 @@ def requires_auth(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         auth = request.headers
-        # Allow our local service to use the API
-        if request.remote_addr == '127.0.0.1':
-            return f(*args, **kwargs)
-            logger.info('API Auth Success')
-        # Only allow specified non-local keys to use the API    
         if not auth or not check_auth(auth['api_key']):
             logged.error("Could not auth API for {}".format(request.remote_addr))
             return authenticate()
@@ -82,7 +76,6 @@ class GrabScreenGrab(Resource):
             logger.error(traceback.format_exc())
             abort(401)
             
-
 api.add_resource(GrabScreenGrab, '/api/grab')
 ''' End API End Point '''
 
@@ -99,9 +92,8 @@ def index():
 # about
 @app.route("/about")
 def about():
-    print request.remote_addr
     return render_template('about.html',year=year)
 ''' End Views '''
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
