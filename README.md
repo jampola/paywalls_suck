@@ -8,7 +8,7 @@ Web app and a simple API
 
 ## Disclaimer
 
-* YMMV, this is a personal project. Whilst it is working for me, due to the OS specific nature opf PhantomJS, something might break for you. 
+* YMMV, this is a personal project. Whilst it is working for me, due to the OS specific nature of PhantomJS, something might break for you. 
 
 * Not all pages may render the way you will see in a Chhrom(ium)e, Firefox, Etc, this can be due to setTimeout or a plethora of other JS libs running on the site that renders the site in a time specific manner.
 
